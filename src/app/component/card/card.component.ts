@@ -72,7 +72,7 @@ async  addCard() {
     this.submitted=true;
   if (this.cardInput.valid) {
 
-    this.router.navigate([''])
+    this.router.navigate(['/'])
     this.store.dispatch(new CardActions.AddCard(this.cardInput.value));
     this.toastr.success("Card Added Successfully");
     this.cardInput.reset;
