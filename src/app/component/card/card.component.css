@@ -638,7 +638,7 @@ form {
   max-width: 400px !important;
   max-height: 251px !important;
   height: 54vw !important;
-  padding: 20px !important;
+  /* padding: 20px !important; */
 }
 
 #ccsingle {

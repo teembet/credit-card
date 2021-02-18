@@ -1,4 +1,4 @@
-<div class="container-fluid col-lg-12 app-container">
+<div class="container-fluid col-lg-12 ">
   <div class="row">
     <div class="col-lg-6 container mt-5" style="align-self:center;">
       <div class="creditcard" #creditcard (click)="flipcard()">
@@ -106,7 +106,7 @@
         <div class="main-content">
           <br /><br />
           <div id="card" class="tabcontent">
-            <form name="form1" [formGroup]="cardInput" (ngSubmit)="addCard()">
+            <form name="form1" [formGroup]="cardInput" (ngSubmit)="addCard()" #myForm="ngForm">
               <div class="form-field-div">
                 <label for="card-card" class="form-label">Enter Card Number</label><br />
                 <input class="form-field" type="tel" autocomplete="cc-number" id="cc-number" ccNum [(ngModel)]="cardNo"

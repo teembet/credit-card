@@ -1,283 +1,340 @@
-.app-container {
-  display: grid;
-  place-items: center;
+@charset "UTF-8";
+.btn-style {
+  border: 1px solid;
+  outline: none;
 }
-
 .times {
   width: 20rem;
   position: relative;
   text-align: right;
 }
-.preload * {
-  -webkit-transition: none !important;
-  -moz-transition: none !important;
-  -ms-transition: none !important;
-  -o-transition: none !important;
+.nubank {
+  background: #41699a;
+  border-radius: 0.75rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+  height: 12rem;
+  max-width: 100%;
+  padding: 1px;
+  position: relative;
+  width: 20rem;
 }
 
-.container {
-  /* width: 100%;
-  max-width: 400px; */
-  max-height: 251px;
-  height: 54vw;
-  padding: 20px;
+.nubank__logo {
+  align-items: stretch;
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
+  margin-top: 1.25rem;
+  position: relative;
 }
 
-#ccsingle {
+.nubank__logo-n,
+.nubank__logo-u {
+  margin-right: 0.25rem;
+}
+
+.nubank__logo-n,
+.nubank__logo-u,
+.nubank__logo-text {
+  height: 2.5rem;
+  position: relative;
+  width: 1.5rem;
+}
+
+.nubank__logo-u {
+  transform: rotate(180deg);
+}
+
+.nubank__logo-large-curve,
+.nubank__logo-small-curve,
+.nubank__logo-large-curve::before,
+.nubank__logo-small-curve::before {
+  border: 0.0625rem solid #cba0d2;
+  box-sizing: border-box;
   position: absolute;
-  right: 15px;
-  top: 20px;
 }
 
-#ccsingle svg {
-  width: 100px;
-  max-height: 60px;
+.nubank__logo-small-curve {
+  border-radius: 0.35rem 0.35rem 0 0;
+  border-bottom-width: 0;
+  bottom: 1rem;
+  top: 0.375rem;
+  width: 1rem;
 }
 
-.creditcard svg#cardfront,
-.creditcard svg#cardback {
-  width: 100%;
-  -webkit-box-shadow: 1px 5px 6px 0px black;
-  box-shadow: 1px 5px 6px 0px black;
-  border-radius: 22px;
+.nubank__logo-large-curve {
+  border-radius: 0.35rem 0.875rem 0 0;
+  border-bottom-width: 0;
+  bottom: 1rem;
+  left: 0.425rem;
+  top: 0rem;
+  width: 1rem;
 }
 
-#generatecard {
-  cursor: pointer;
-  float: right;
-  font-size: 12px;
-  color: #fff;
-  padding: 2px 4px;
-  background-color: #909090;
+.nubank__logo-small-curve::before,
+.nubank__logo-large-curve::before {
+  border-radius: 0 0 0.0625rem 0.0625rem;
+  border-top-width: 0;
+  bottom: -0.5625rem;
+  content: "";
+  height: 0.75rem;
+  width: 0.4875rem;
+}
+
+.nubank__logo-small-curve::before {
+  left: -0.0625rem;
+}
+
+.nubank__logo-large-curve::before {
+  right: -0.0625rem;
+}
+
+.nubank__logo-text-bank {
+  bottom: 0.5rem;
+  color: #cba0d2;
+  line-height: 1;
+  font-family: "Ubuntu Condensed", sans-serif;
+  font-size: 1rem;
+  font-weight: 100;
+  position: absolute;
+}
+
+.nubank__chip {
+  background: linear-gradient(to bottom, #d5a984 0%, #c6935f 100%);
   border-radius: 4px;
-  cursor: pointer;
-  float: right;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+  height: 1.875rem;
+  overflow: hidden;
+  position: relative;
+  width: 2.625rem;
 }
 
-/* CHANGEABLE CARD ELEMENTS */
-.creditcard .lightcolor,
-.creditcard .darkcolor {
-  -webkit-transition: fill 0.5s;
-  transition: fill 0.5s;
+.nubank__chip-line {
+  border: solid #673e17;
+  display: inline-block;
+  position: absolute;
 }
 
-.creditcard .lightblue {
-  fill: #03a9f4;
+.nubank__chip-line-top {
+  box-shadow: 1px 1px 0 0 rgba(0, 0, 0, 0.3),
+    2px 2px 0 0 rgba(255, 255, 255, 0.1);
+  left: -2px;
+  top: -2px;
 }
 
-.creditcard .lightbluedark {
-  fill: #0288d1;
+.nubank__chip-line-bottom {
+  bottom: -2px;
+  box-shadow: inset 1px 1px 0 0 rgba(0, 0, 0, 0.3),
+    inset 2px 2px 0 0 rgba(255, 255, 255, 0.1);
+  right: -2px;
 }
 
-.creditcard .red {
-  fill: #ef5350;
+.nubank__chip-line-a {
+  border-radius: 0 0 10px 0;
+  border-width: 0 1px 1px 0;
+  height: 90%;
+  width: 30%;
 }
 
-.creditcard .reddark {
-  fill: #d32f2f;
+.nubank__chip-line-b {
+  border-radius: 0 0 14px 0;
+  border-width: 0 1px 1px 0;
+  height: 35%;
+  width: 75%;
 }
 
-.creditcard .purple {
-  fill: #ab47bc;
+.nubank__chip-line-c {
+  border-radius: 10px 0 0 0;
+  border-width: 1px 0 0 1px;
+  height: 80%;
+  width: 30%;
 }
 
-.creditcard .purpledark {
-  fill: #7b1fa2;
+.nubank__chip-line-d {
+  border-radius: 14px 0 0 0;
+  border-width: 1px 0 0 1px;
+  height: 30%;
+  width: 60%;
 }
 
-.creditcard .cyan {
-  fill: #26c6da;
+.nubank__middle {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  margin: 0 1.625rem;
+  position: relative;
 }
 
-.creditcard .cyandark {
-  fill: #0097a7;
-}
-
-.creditcard .green {
-  fill: #66bb6a;
-}
-
-.creditcard .greendark {
-  fill: #388e3c;
-}
-
-.creditcard .lime {
-  fill: #d4e157;
-}
-
-.creditcard .limedark {
-  fill: #afb42b;
-}
-
-.creditcard .yellow {
-  fill: #ffeb3b;
-}
-
-.creditcard .yellowdark {
-  fill: #f9a825;
-}
-
-.creditcard .orange {
-  fill: #ff9800;
-}
-
-.creditcard .orangedark {
-  fill: #ef6c00;
-}
-
-.creditcard .grey {
-  fill: #bdbdbd;
-}
-
-.creditcard .greydark {
-  fill: #616161;
-}
-
-/* FRONT OF CARD */
-#svgname {
+.nubank__model {
+  color: rgba(255, 201, 255, 0.8);
+  font-family: "Share Tech Mono", monospace;
+  flex: 1;
+  font-size: 0.625rem;
+  letter-spacing: 0.3em;
+  padding-right: 2.625rem;
+  text-align: center;
+  text-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.3);
   text-transform: uppercase;
 }
 
-#cardfront .st2 {
-  fill: #ffffff;
+.nubank__info {
+  margin: 0.8125rem 2.4125rem 0 1.625rem;
+  position: relative;
+  z-index: 2;
 }
 
-#cardfront .st3 {
-  font-family: "Source Code Pro", monospace;
-  font-weight: 600;
+.nubank__number,
+.nubank__expiration,
+.nubank__holder {
+  color: #ecdcec;
+  font-family: "Share Tech Mono", monospace;
+  letter-spacing: 0.1em;
+  line-height: 1;
+  text-shadow: 0 -1px 0px rgba(155, 155, 155, 0.5), 0 1px 1px black;
 }
 
-#cardfront .st4 {
-  font-size: 54.7817px;
+.nubank__number {
+  font-size: 1.2rem;
 }
 
-#cardfront .st5 {
-  font-family: "Source Code Pro", monospace;
-  font-weight: 400;
+.nubank__details {
+  color: rgba(0, 0, 0, 0.3);
+  font-family: "Arial", sans-serif;
+  font-size: 0.5125rem;
+  font-weight: bold;
+  line-height: 1;
+  margin: 0.175rem 0 0.375rem;
 }
 
-#cardfront .st6 {
-  font-size: 33.1112px;
+.nubank__details-4-digits {
+  display: inline-block;
+  text-align: center;
+  width: 2.75rem;
 }
 
-#cardfront .st7 {
-  opacity: 0.6;
-  fill: #ffffff;
+.nubank__details-expiration {
+  display: inline-block;
+  margin-left: 1.6125rem;
 }
 
-#cardfront .st8 {
-  font-size: 24px;
+.nubank__expiration {
+  display: flex;
+  flex-direction: row;
+  font-size: 0.8125rem;
+  justify-content: space-around;
+  margin-bottom: 0.6125rem;
+  width: 66%;
 }
 
-#cardfront .st9 {
-  font-size: 30.5498px;
+.nubank__holder {
+  font-size: 0.8125rem;
 }
 
-#cardfront .st10 {
-  font-family: "Source Code Pro", monospace;
-  font-weight: 300;
-}
-
-#cardfront .st11 {
-  font-size: 16.1716px;
-}
-
-#cardfront .st12 {
-  fill: #4c4c4c;
-}
-
-/* BACK OF CARD */
-#cardback .st0 {
-  fill: none;
-  stroke: #0f0f0f;
-  stroke-miterlimit: 10;
-}
-
-#cardback .st2 {
-  fill: #111111;
-}
-
-#cardback .st3 {
-  fill: #f2f2f2;
-}
-
-#cardback .st4 {
-  fill: #d8d2db;
-}
-
-#cardback .st5 {
-  fill: #c4c4c4;
-}
-
-#cardback .st6 {
-  font-family: "Source Code Pro", monospace;
-  font-weight: 400;
-}
-
-#cardback .st7 {
-  font-size: 27px;
-}
-
-#cardback .st8 {
-  opacity: 0.6;
-}
-
-#cardback .st9 {
-  fill: #ffffff;
-}
-
-#cardback .st10 {
-  font-size: 24px;
-}
-
-#cardback .st11 {
-  fill: #eaeaea;
-}
-
-#cardback .st12 {
-  font-family: "Rock Salt", cursive;
-}
-
-#cardback .st13 {
-  font-size: 37.769px;
-}
-
-/* FLIP ANIMATION */
-.container {
-  perspective: 1000px;
-}
-
-.creditcard {
-  width: 100%;
-  max-width: 400px;
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  transition: -webkit-transform 0.6s;
-  -webkit-transition: -webkit-transform 0.6s;
-  transition: transform 0.6s;
-  transition: transform 0.6s, -webkit-transform 0.6s;
-  cursor: pointer;
-}
-
-.creditcard .front,
-.creditcard .back {
+.nubank__security {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 1.5rem;
+  bottom: 1.275rem;
+  padding: 0.25rem;
   position: absolute;
-  width: 100%;
-  max-width: 400px;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-font-smoothing: antialiased;
-  color: #47525d;
+  right: 1rem;
+  z-index: 1;
 }
 
-.creditcard .back {
-  -webkit-transform: rotateY(180deg);
-  transform: rotateY(180deg);
+.nubank__seal {
+  background: repeating-linear-gradient(
+    0,
+    #d8d2db,
+    #d8d2db 5px,
+    #cccccc 5px,
+    #cccccc 6px
+  );
+  border-radius: 1.5rem;
+  height: 3.25rem;
+  margin-bottom: 0.25rem;
+  position: relative;
 }
 
-.creditcard.flipped {
-  -webkit-transform: rotateY(180deg);
-  transform: rotateY(180deg);
+.nubank__seal::before,
+.nubank__seal::after {
+  color: #aaa;
+  content: "";
+  font-family: "FontAwesome", sans-serif;
+  font-size: 2.5rem;
+  line-height: 1;
+  opacity: 0.5;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+}
+
+.nubank__seal::before {
+  left: 35%;
+}
+
+.nubank__seal::after {
+  left: 65%;
+}
+
+.nubank__master {
+  height: 2.75rem;
+  position: relative;
+  width: 4.5rem;
+}
+
+.nubank__master-left,
+.nubank__master-right,
+.nubank__master-center {
+  border-radius: 100%;
+  display: inline-block;
+  height: 2.75rem;
+  position: absolute;
+  top: 0;
+  width: 2.75rem;
+}
+
+.nubank__master-left {
+  background: #ea001b;
+  left: 0;
+  z-index: 2;
+}
+
+.nubank__master-right,
+.nubank__master-center {
+  background: #f79f1a;
+  right: 0;
+}
+
+.nubank__master-right {
+  z-index: 1;
+}
+
+.nubank__master-center {
+  opacity: 0.6;
+  z-index: 3;
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+}
+
+.credits {
+  color: #666;
+  font: 1rem "Ubuntu Condensed";
+  margin-top: 2rem;
+}
+.credits .red {
+  color: #cc0000;
+}
+.credits a {
+  color: #ccc;
+  text-decoration: none;
+}
+.times {
+  width: 20rem;
+  position: relative;
+  text-align: right;
 }

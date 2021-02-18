@@ -30,12 +30,13 @@ holder:string
 
 
   ngOnInit() {
-    console.log(this.carddetails)
+   
   }
 
-  flipcard(){
+  flipcard(i){
+    if(i){
   const card=this.creditcard
-  card.nativeElement.classList.contains('flipped')?card.nativeElement.classList.remove('flipped'):card.nativeElement.classList.add('flipped')
+  card.nativeElement.classList.contains('flipped')?card.nativeElement.classList.remove('flipped'):card.nativeElement.classList.add('flipped')}
 }
 delCard(index) {
 

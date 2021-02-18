@@ -11,7 +11,7 @@ const initialState: cardDetails = {
     cardHolder: 'tim',
     expiry: '19/04',
     cvv:'455',
-    amount:'$4000'
+    amount:'4000'
 }
 
 
